@@ -3,32 +3,32 @@ clear all;
 
 %======= DANE DO SYMULACJI =======%
 
-% ZMIENNE WYJŒCIOWE
-TwewN = 20;  
-TpN   = 15;  
+% ZMIENNE WYJï¿½CIOWE
+TwewN = 20;
+TpN   = 15;
 
 % DANE TABLICOWE
 Cp = 1000;
 Ro = 1.2;
 
-% ZMIENNE WEJŒCIOWE
-QkN   =  20000;     % Qk = Cp*Ro*Fp*Tkz, wiêc pomijamy j¹ jako zm. wej.
+% ZMIENNE WEJï¿½CIOWE
+QkN   =  20000;     % Qk = Cp*Ro*Fp*Tkz, wiï¿½c pomijamy jï¿½ jako zm. wej.
 TzewN = -20;
 TkzN  =  35;
-FpN   =  QkN/(Cp*Ro*TkzN);
+FpN   =  QkN / (Cp*Ro*TkzN);
 
-% WSPÓ£CZYNNIKI UK£ADU
-K1 = (QkN/TkzN)*(TkzN-TpN)/(TwewN+3*TpN-4*TzewN);
-K2 = 3*K1;
-KP = (QkN/TkzN)*((TkzN-TwewN)-(TkzN-TpN)*((TwewN-TzewN)/(TwewN+3*TpN-4*TzewN)))/(TwewN-TpN);
+% WSPÓ£CZYNNIKI UKï¿½ADU
+K1 = (QkN/TkzN) * (TkzN-TpN) / (TwewN+3*TpN-4*TzewN);
+K2 = 3 * K1;
+KP = (QkN/TkzN) * ((TkzN-TwewN) - (TkzN-TpN) * ((TwewN-TzewN) / (TwewN+3*TpN-4*TzewN))) / (TwewN-TpN);
 
-% OBJÊTOŒCI POMIESZCZEÑ
-Vw = K1*K2*2.5;
-Vp = 0.5*Vw;
+% OBJï¿½TOï¿½CI POMIESZCZEï¿½
+Vw = K1 * K2 * 2.5;
+Vp = 0.5 * Vw;
 
 % PARAMETRY
-Cvp = Cp*Ro*Vp;
-Cvw = Cp*Ro*Vw;
+Cvp = Cp * Ro * Vp;
+Cvw = Cp * Ro * Vw;
 Fp0   = FpN;
 
 % DEFINICJA MACIERZY

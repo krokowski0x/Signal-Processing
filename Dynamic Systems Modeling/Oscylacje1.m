@@ -25,11 +25,11 @@ re = [real(x1) real(x2)];
 im = [imag(x1) imag(x2)];
 
 figure(f1);
-subplot(1,3,1);
-plot(re,im,'o');
+subplot 131
+plot(re, im, 'o');
 sim('Oscylacje'); grid on;
-subplot(1,3,2);
-plot(t,x); grid on;
+subplot 132
+plot(t, x); grid on;
 xlabel('t');
 ylabel('x');
 
@@ -42,11 +42,11 @@ re = [real(x1) real(x2)];
 im = [imag(x1) imag(x2)];
 
 figure(f2);
-subplot(1,3,1);
-plot(re,im,'o');
+subplot 131
+plot(re, im, 'o');
 sim('Oscylacje'); grid on;
-subplot(1,3,2);
-plot(t,x); grid on;
+subplot 132
+plot(t, x); grid on;
 xlabel('t');
 ylabel('x');
 
@@ -59,11 +59,11 @@ re = [real(x1) real(x2)];
 im = [imag(x1) imag(x2)];
 
 figure(f3);
-subplot(1,3,1);
-plot(re,im,'o');
+subplot 131
+plot(re, im, 'o');
 sim('Oscylacje'); grid on;
 subplot(1,3,2);
-plot(t,x); grid on;
+plot(t, x); grid on;
 xlabel('t');
 ylabel('x');
 
@@ -76,11 +76,11 @@ re = [real(x1) real(x2)];
 im = [imag(x1) imag(x2)];
 
 figure(f4);
-subplot(1,3,1);
-plot(re,im,'o');
+subplot 131
+plot(re, im, 'o');
 sim('Oscylacje'); grid on;
-subplot(1,3,2);
-plot(t,x); grid on;
+subplot 132
+plot(t, x); grid on;
 xlabel('t');
 ylabel('x');
 
@@ -93,10 +93,10 @@ re = [real(x1) real(x2)];
 im = [imag(x1) imag(x2)];
 
 figure(f5);
-subplot(1,3,1);
-plot(re,im,'o');
+subplot 131
+plot(re, im, 'o');
 sim('Oscylacje'); grid on;
-subplot(1,3,2);
-plot(t,x); grid on;
+subplot 132
+plot(t, x); grid on;
 xlabel('t');
 ylabel('x');
