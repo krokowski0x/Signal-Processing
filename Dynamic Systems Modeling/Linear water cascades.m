@@ -1,7 +1,7 @@
 clear all;
 close all;
 
-% DANE
+% DATA
 
 A1 = 3;
 A2 = 2;
@@ -17,28 +17,28 @@ a2 = (Aw2 * sqrt(2 * g * h2))/h2;
 fmax = a1 * h1;
 d1 = 0.1 * fmax;
 d2 = 0;
-fwe2 = 1;
-fwe1wektor = [0 0.5*fmax 0.9*fmax];
+fin2 = 1;
+fin1vector = [0 0.5*fmax 0.9*fmax];
 
 t0 = 1;
 
-% WYKRESY ZLINEARYZOWANE
+% LINEAR PLOTTING
 
 figure(1);
 subplot 121
 grid on;
 hold on;
-title('Wymuszenie skokowe dla h1(t) // ZLINEARYZOWANE');
+title('Step for h1(t) // LINEAR');
 xlabel('t');
 ylabel('h1');
 for i = 1:3
 
-   fwe1 = fwe1wektor(i);
+   fin1 = fin1vector(i);
 
-   h10 = fwe1 / a1;
-   h20 = (fwe1+fwe2) / a2;
+   h10 = fin1 / a1;
+   h20 = (fin1+fin2) / a2;
 
-   sim('KASKADY');
+   sim('Cascades');
    plot(t, h1);
 
 end
@@ -47,17 +47,17 @@ legend('f = 0','f = 0.5 * fmax','f = 0.9 * fmax');
 subplot 122
 grid on;
 hold on;
-title('Wymuszenie skokowe dla h2(t) // ZLINEARYZOWANE');
+title('Step for h2(t) // LINEAR');
 xlabel('t');
 ylabel('h2');
 for i = 1:3
 
-   fwe1 = fwe1wektor(i);
+   fin1 = fin1vector(i);
 
-   h10 = fwe1 / a1;
-   h20 = (fwe1+fwe2) / a2;
+   h10 = fin1 / a1;
+   h20 = (fin1+fin2) / a2;
 
-   sim('KASKADY');
+   sim('Cascades');
    plot(t, h2);
 
 end
